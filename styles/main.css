@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap')
+
 :root{
     --vertical-space: 2rem;
     --horizontal-space: 3rem;
+    --background-color:#7E5EF2;
+    --font-color:#ffffff;
+    --secondary-color:#B3B6F2;
+    --tertinary-color:#62D98B;
+    --underline-color:#F27A5E;
 }
 
 #personalPhoto{
@@ -9,14 +16,19 @@
 
 p{
     max-width: 40em;
+    color: #ffffff;
 
 }
 
 h1, h2, h3, h4{
     line-height: 1.2em;
+    font-family: "Truculenta", sans-serif;
+    color: #ffffff;
 }
 
 body{
+    background-color:#7E5EF2;
+    font-family: "Roboto", sans-serif;
     line-height: 1.5em;
     display: grid;
     grid-template-areas: "head nav"
@@ -24,6 +36,15 @@ body{
                         "foot foot";
     grid-template-columns: 1fr 3fr;
     grid-template-rows: auto 2fr auto;
+}
+
+a {
+    color: #ffffff;
+    text-decoration-color: #F27A5E;
+}
+
+a:hover{
+    text-decoration-color:#B3B6F2;
 }
 
 body > * {
@@ -52,6 +73,7 @@ body > nav ul li{
 main{
     grid-area: main;
     padding-top: 0;
+    
 }
 
 footer{
@@ -82,6 +104,6 @@ body#portfolio ul#portfolioitems{
     }
 }
 
-body#portfolio ul#portfolioitems li{
+body#portfolio ul#portfolioitems li{ 
     max-width: 100%;
 }
