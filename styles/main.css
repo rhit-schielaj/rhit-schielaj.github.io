@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
 
 :root{
     --vertical-space: 2rem;
     --horizontal-space: 3rem;
-    --background-color:#7E5EF2;
-    --font-color:#ffffff;
+    --main-color:#7E5EF2;
+    --text-color:#ffffff;
     --secondary-color:#B3B6F2;
-    --tertinary-color:#62D98B;
+    --tertinary-color:#62D98BA2;
     --underline-color:#F27A5E;
 }
 
@@ -16,35 +16,45 @@
 
 p{
     max-width: 40em;
-    color: #ffffff;
 
 }
 
 h1, h2, h3, h4{
     line-height: 1.2em;
     font-family: "Truculenta", sans-serif;
-    color: #ffffff;
 }
 
+li > h2{
+    font-size: 2em;
+    padding: 20px;
+}
+
+ul > li > img{
+    max-width: 40em;
+    max-height: 200px;
+}
+
+
 body{
-    background-color:#7E5EF2;
+    background-color: var(--main-color);
+    color: var(--text-color);
     font-family: "Roboto", sans-serif;
     line-height: 1.5em;
     display: grid;
-    grid-template-areas: "head nav"
+    grid-template-areas: "head head"
                          "main main"
                         "foot foot";
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-rows: auto 2fr auto;
 }
 
 a {
-    color: #ffffff;
-    text-decoration-color: #F27A5E;
+    color: var(--text-color);
+    text-decoration-color: var(--underline-color);
 }
 
 a:hover{
-    text-decoration-color:#B3B6F2;
+    text-decoration-color:var(--secondary-color);
 }
 
 body > * {
@@ -52,20 +62,23 @@ body > * {
 }
 
 header{
+    background-color: var(--secondary-color);
+    width:100%;
     grid-area: head;
+    display: inline;
+    /* padding-right: 0; */
     
 }
-nav{
-    grid-area: nav;
-    padding: 0;
-}
 
-nav > ul{
+header > ul{
+    grid-area: nav;
+    display: inline;
     list-style-type: none;
     padding: 0;
 }
 
-body > nav ul li{
+body > header ul li{
+    line-height: 1.2em;
     display: inline;
     padding-right: 1rem;
 }
@@ -99,11 +112,23 @@ body#portfolio ul#portfolioitems{
 
 @media screen and (min-width:25em){
     body#portfolio ul#portfolioitems li{
-        flex-basis: 48%;
+        flex-basis: 46%;
         padding-right: 2%;
+        padding-left: 2%;
     }
 }
 
 body#portfolio ul#portfolioitems li{ 
     max-width: 100%;
+    background-color: var(--tertinary-color);
+}
+
+body#portfolio ul#portfolioitems li p{ 
+    padding: 20px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
 }
