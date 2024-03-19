@@ -63,7 +63,7 @@ body > * {
 
 header{
     background-color: var(--secondary-color);
-    width:100%;
+    /* width:100%; */
     grid-area: head;
     display: inline;
     /* padding-right: 0; */
