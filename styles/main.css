@@ -128,7 +128,7 @@ body#portfolio ul#portfolioitems li p{
 }
 
 .sticky {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%
 }
