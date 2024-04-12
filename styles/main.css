@@ -50,11 +50,11 @@ body{
 
 a {
     color: var(--text-color);
-    text-decoration-color: var(--underline-color);
+    text-decoration-color: var(--secondary-color);
 }
 
 a:hover{
-    text-decoration-color:var(--secondary-color);
+    text-decoration-color:var(--underline-color);
 }
 
 body > * {
