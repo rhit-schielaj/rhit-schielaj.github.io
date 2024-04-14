@@ -9,7 +9,7 @@ window.ontouchmove = e =>{
     if(track.dataset.mouseDownAt === "0") return;
     
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.touches[0].clientX,
-        maxDelta = window.innerWidth / 2;
+        maxDelta = window.innerWidth;
 
     const percentage = (mouseDelta / maxDelta) * -100;
     let    nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
@@ -17,20 +17,20 @@ window.ontouchmove = e =>{
     if(nextPercentage > 0){ nextPercentage = 0;}
     track.dataset.percentage = nextPercentage;
     // document.querySelector("#home > button").innerHTML = "maxDelta: " + maxDelta + " mouseDelta: " + mouseDelta;
-    track.style.transform = `translate(${nextPercentage+50}%, 0%)`;
-    // track.animate({
-    //     transform: `translate(${nextPercentage+50}%, 0%)`},
-    //     { duration: 1200, fill: "forwards"});
+    // track.style.transform = `translate(${nextPercentage+50}%, 0%)`;
+    track.animate({
+        transform: `translate(${nextPercentage+50}%, 0%)`},
+        { duration: 1200, fill: "forwards"});
 
 
 
     const images = track.querySelectorAll(".image");
 
     images.forEach((image) => {
-        image.style.objectPosition = `${nextPercentage+100}% 50%`
-    //     image.animate({
-    //         objectPosition: `${nextPercentage+100}% 50%`},
-    //     { duration: 1200, fill:"forwards"});
+        // image.style.objectPosition = `${nextPercentage+100}% 50%`
+        image.animate({
+            objectPosition: `${nextPercentage+100}% 50%`},
+        { duration: 1200, fill:"forwards"});
     });
 }
 
