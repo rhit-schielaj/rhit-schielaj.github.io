@@ -17,19 +17,20 @@ window.ontouchmove = e =>{
     if(nextPercentage > 0){ nextPercentage = 0;}
     track.dataset.percentage = nextPercentage;
 
-    track.animate({
-        transform: `translate(${nextPercentage+50}%, 0%)`},
-        { duration: 1200, fill: "forwards"});
+    track.style.transform = `translate(${nextPercentage+50}%, 0%)`;
+    // track.animate({
+    //     transform: `translate(${nextPercentage+50}%, 0%)`},
+    //     { duration: 1200, fill: "forwards"});
 
 
 
     const images = track.querySelectorAll(".image");
 
     images.forEach((image) => {
-        // image.style.objectPosition = `${nextPercentage+100}% 50%`
-        image.animate({
-            objectPosition: `${nextPercentage+100}% 50%`},
-        { duration: 1200, fill:"forwards"});
+        image.style.objectPosition = `${nextPercentage+100}% 50%`
+    //     image.animate({
+    //         objectPosition: `${nextPercentage+100}% 50%`},
+    //     { duration: 1200, fill:"forwards"});
     });
 }
 
@@ -45,7 +46,7 @@ window.onmousedown = e => {
 }
 window.onmousemove = e =>{
     if(track.dataset.mouseDownAt === "0") return;
-
+    document.querySelector("#home > button").innerHTML = e.clientX;
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
         maxDelta = window.innerWidth / 2;
 
@@ -76,7 +77,7 @@ window.onmouseup = () =>{
     if(track.dataset.percentage){
     track.dataset.prevPercentage = track.dataset.percentage;
     }
-}
+};
 
 const borderButton = document.querySelector("#home > button");
 borderButton.onclick = (params) => {
