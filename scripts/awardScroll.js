@@ -16,7 +16,7 @@ window.ontouchmove = e =>{
     if(nextPercentage < -100){nextPercentage = -100;}
     if(nextPercentage > 0){ nextPercentage = 0;}
     track.dataset.percentage = nextPercentage;
-    document.querySelector("#home > button").innerHTML = percentage;
+    document.querySelector("#home > button").innerHTML = "maxDelta: " + maxDelta + " mouseDelta: " + mouseDelta;
     track.style.transform = `translate(${nextPercentage+50}%, 0%)`;
     // track.animate({
     //     transform: `translate(${nextPercentage+50}%, 0%)`},
