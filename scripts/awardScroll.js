@@ -2,13 +2,12 @@ const track = document.getElementById("image-track");
 
 window.ontouchstart = e => {
     track.dataset.mouseDownAt=e.clientX;
-    document.querySelector("#home > button").innerHTML = e.touches[0].clientX;
+    
 }
 
 window.ontouchmove = e =>{
-    // document.querySelector("body").style.backgroundColor = "white";
     if(track.dataset.mouseDownAt === "0") return;
-
+    document.querySelector("#home > button").innerHTML = e.touches[0].clientX;
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.touches[0].clientX,
         maxDelta = window.innerWidth / 2;
 
