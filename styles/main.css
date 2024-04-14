@@ -19,6 +19,31 @@ p{
 
 }
 
+.ovalButton{
+background-color: var(--main-color);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 32px;
+  transition: background-color 0.2s ease-out;
+}
+a.ovalButton:hover{
+    text-decoration:underline;
+    text-decoration-color: var(--underline-color);
+    background-color: var(--secondary-color);
+}
+
+#stickyHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
 h1, h2, h3, h4{
     line-height: 1.2em;
     font-family: "Truculenta", sans-serif;
@@ -48,14 +73,14 @@ body{
     grid-template-rows: auto 2fr auto;
 }
 
-a {
+/* a {
     color: var(--text-color);
     text-decoration-color: var(--secondary-color);
 }
 
 a:hover{
     text-decoration-color:var(--underline-color);
-}
+} */
 
 body > * {
     padding: 4rem;
@@ -66,7 +91,7 @@ header{
     /* width:100%; */
     grid-area: head;
     display: inline;
-    /* padding-right: 0; */
+    padding-right: 1vw;
     
 }
 
@@ -130,5 +155,4 @@ body#portfolio ul#portfolioitems li p{
 .sticky {
     position: sticky;
     top: 0;
-    width: 100%
 }
