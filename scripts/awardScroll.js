@@ -7,7 +7,7 @@ window.ontouchstart = e => {
 
 window.ontouchmove = e =>{
     if(track.dataset.mouseDownAt === "0") return;
-    document.querySelector("#home > button").innerHTML = e.touches[0].clientX;
+    document.querySelector("#home > button").innerHTML = track;
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.touches[0].clientX,
         maxDelta = window.innerWidth / 2;
 
