@@ -1,6 +1,7 @@
 const track = document.getElementById("image-track");
 
 window.ontouchstart = e => {
+    document.querySelector("body").style.backgroundColor = "white";
     track.dataset.mouseDownAt=e.clientX;
 }
 
@@ -98,13 +99,13 @@ borderButton.onclick = (params) => {
     else if(borderButton.dataset.active==="2"){
         borderButton.dataset.active = "3";
         images.forEach((image) => {
-            image.style.border = "4px solid currentColor";
+            image.style.border = "0.3vw solid currentColor";
     });
     }
     else if(borderButton.dataset.active==="3"){
         borderButton.dataset.active = "0";
         images.forEach((image) => {
-            image.animate({boxShadow: "0 0 1rem 4px #39d4ff"}, { duration: 1000, fill:"forwards", easing: "ease-out"});
+            image.animate({boxShadow: "0 0 1rem 0.3vw #39d4ff"}, { duration: 1000, fill:"forwards", easing: "ease-out"});
             // image.style.boxShadow = "0 0 1rem 4px #39d4ff";    
         });
         
