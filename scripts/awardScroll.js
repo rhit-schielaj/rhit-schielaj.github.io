@@ -1,5 +1,44 @@
 const track = document.getElementById("image-track");
 
+window.ontouchstart = e => {
+    track.dataset.mouseDownAt=e.clientX;
+}
+
+window.ontouchmove = e =>{
+    if(track.dataset.mouseDownAt === "0") return;
+
+    const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+        maxDelta = window.innerWidth / 2;
+
+    const percentage = (mouseDelta / maxDelta) * -100;
+    let    nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
+    if(nextPercentage < -100){nextPercentage = -100;}
+    if(nextPercentage > 0){ nextPercentage = 0;}
+    track.dataset.percentage = nextPercentage;
+
+    track.animate({
+        transform: `translate(${nextPercentage+50}%, 0%)`},
+        { duration: 1200, fill: "forwards"});
+
+
+
+    const images = track.querySelectorAll(".image");
+
+    images.forEach((image) => {
+        // image.style.objectPosition = `${nextPercentage+100}% 50%`
+        image.animate({
+            objectPosition: `${nextPercentage+100}% 50%`},
+        { duration: 1200, fill:"forwards"});
+    });
+}
+
+window.ontouchend = () =>{
+    track.dataset.mouseDownAt = "0";
+    if(track.dataset.percentage){
+    track.dataset.prevPercentage = track.dataset.percentage;
+    }
+}
+
 window.onmousedown = e => {
     track.dataset.mouseDownAt=e.clientX;
 }
