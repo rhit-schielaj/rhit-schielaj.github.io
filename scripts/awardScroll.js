@@ -1,11 +1,12 @@
 const track = document.getElementById("image-track");
 
 window.ontouchstart = e => {
-    document.querySelector("body").style.backgroundColor = "white";
     track.dataset.mouseDownAt=e.clientX;
+    document.querySelector("#home > button").innerHTML = e.clientX;
 }
 
 window.ontouchmove = e =>{
+    document.querySelector("body").style.backgroundColor = "white";
     if(track.dataset.mouseDownAt === "0") return;
 
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
