@@ -90,23 +90,23 @@ header{
     background-color: var(--secondary-color);
     /* width:100%; */
     grid-area: head;
-    display: inline;
+    /* display: inline; */
     padding-right: 1vw;
     
 }
 
-header > ul{
+/* header > ul{
     grid-area: nav;
     display: inline;
     list-style-type: none;
     padding: 0;
-}
+} */
 
-body > header ul li{
+/* body > header ul li{
     line-height: 1.2em;
     display: inline;
     padding-right: 1rem;
-}
+} */
 
 main{
     grid-area: main;
