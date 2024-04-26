@@ -10,7 +10,7 @@
             font-family: 'Rubik', sans-serif;
             /* color: white; */
             font-size: 3em;
-            margin:1vh;
+            margin:0;
         }
 
         #topnav>div{
@@ -19,16 +19,16 @@
         }
 
         #topnav{
-            padding: 2vmin;
+            /* padding: 2vmin; */
             /* background-color: rgb(155, 178, 255); */
             /* background-color: white; */
         }
 
         body{
-            height: 100%;
+            height: 100vh;
             margin: 0;
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(rgb(205, 195, 255), rgb(255, 255, 255));
+            /* background: linear-gradient(rgb(205, 195, 255), rgb(255, 255, 255)); */
             /* background: linear-gradient(#8fb4ff white); */
             font-weight:550;
             
@@ -127,6 +127,11 @@
             padding:0;
         }
 
+        .listSB{
+            display: flex;
+            justify-content: space-between;
+        }
+
         .sideBarHeader{
             margin: 0.2em 0;
             color: rgb(112, 0, 112);
@@ -165,7 +170,7 @@
     <div id="outsideWrapper">
     <nav id="topnav">
     <h1>Alex Schieltz</h1>
-    <div>Computer Programmer</div>
+    <div>Computer Scientist</div>
     </nav> 
     <hr class="basicHorizontal" style="margin:0;">
     <div id="mainBody">
@@ -291,11 +296,11 @@
             </div>
             <hr class="basicHorizontal">
             <div class="sideBarBox">
-                <h3 class="sideBarHeader">Activities:</h3>
-                <li class="nolist">Computer Security Club</li>
-                <li class="nolist">Cyberpatriot</li>
-                <li class="nolist">Cyber Defense Competition</li>
-                <li class="nolist">FIRST Robotics Competition</li>
+                <h3 class="sideBarHeader listSB"><div>Activities:</div><div>Years</div></h3>
+                <li class="nolist listSB"><div>Computer Security</div><div>1</div></li>
+                <li class="nolist listSB"><div>Cyberpatriot</div><div>2</div></li>
+                <li class="nolist listSB"><div>Cyber Defense Competition</div><div>2</div></li>
+                <li class="nolist listSB"><div>FIRST Robotics Competition</div><div>4</div></li>
                 <!-- <p>Git, Eclipse, Visual Studio, Visual Studio Code, Tableau, </p> -->
             </div>
         </nav>
