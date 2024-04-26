@@ -1,5 +1,10 @@
 const track = document.getElementById("image-track");
 
+window.addEventListener('scroll', function(){
+    console.log(window.scrollY);
+    console.log("We see scroll!");
+})
+
 window.ontouchstart = e => {
     track.dataset.mouseDownAt=e.touches[0].clientX;
     

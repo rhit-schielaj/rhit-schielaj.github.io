@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Rubik');
+
+        h1{
+            width:100%;
+            font-family: 'Rubik', sans-serif;
+            /* color: white; */
+            font-size: 2em;
+            margin:1vh 0;
+            padding: 0;
+        }
+
+        body{
+            /* height: 100vh; */
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            /* background: linear-gradient(rgb(205, 195, 255), rgb(255, 255, 255)); */
+            /* background: linear-gradient(#8fb4ff white); */
+            font-weight:550;
+            
+        }
+
+        #container{
+            width:100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            
+            /* background-color: green; */
+        }
+
+        #outsideWrapper{
+            display: flex;
+            flex-direction: column;
+            /* height: 100%; */
+            /* aspect-ratio: 17/22; */
+            aspect-ratio: 10/14;
+            /* background-color: yellow; */
+        }
+        #mainBody{
+            flex: 1 1 0;
+            display: flex;
+            flex-direction: row;
+            /* padding-bottom: 10vmin; */
+            /* padding: 2vmin; */
+        }
+
+        #mainContent{
+            flex: 2 1 0;
+            /* background-color: #FFFFFF; */
+            padding: 2vmin 2vmin 0 2vmin
+        }
+
+        #sideBar{
+            flex: 1 1 0;
+            /* background-color: #C0C4CC; */
+            display:flex;
+            flex-direction: column;
+            border-right: 2px solid black;
+            /* padding: 2vmin 1vmin 0 1vmin; */
+            font-size: 0.9em;
+            /* justify-content: space-around; */
+            /* padding-left: 0.5vw; */
+        }
+
+
+        #sidebar>div{
+            flex: 1 0 0;
+        }
+
+        /* .sideBarBox>*, .sideBarBox>ul{
+            margin-left:2vw;
+        }         */
+        .sideBarBox{
+            padding: 0 1vmin 1vmin 2vw;
+        }
+
+        .sideBarBox1{
+            background-color: rgb(205, 195, 255);
+            padding: 2vw 0 2vw 2vw;
+            /* height: 23vh; */
+        }
+
+        #vertical{
+            width: 1;
+            height: 100%;
+            margin: 0.5vw;
+        }
+
+        .header{
+            
+            /* columns: 3; */
+            /* column-gap: 1vw; */
+            padding: 0;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            /* flex-wrap: wrap; */
+            width:100%;
+            margin:0;
+        }
+
+        .header>li{
+            /* flex: 0 0 0; */
+            /* font-family: 'Open Sans', sans-serif; */
+            display: flex;
+            justify-content: space-between;
+            margin-right:0.7vw;
+        }
+
+        .header, .header>li{
+            list-style: none;
+        }
+
+        .basicHorizontal{
+            width:100%;
+            height:2px;
+            background-color: black;
+            margin:2px;
+            border: none;
+            /* display:block; */
+            /* margin: 0.2vh 0; */
+        }
+
+        .horizontal2{
+            width:90%;
+        }
+
+        .nolist{
+            list-style: none;
+            padding:0;
+        }
+
+        .sideBarHeader{
+            margin: 0.2em 0;
+            color: rgb(112, 0, 112);
+        }
+
+        h2, h3{
+            margin: 1vmin 0 0 0;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        ul, dl, dd{
+            margin: 0;
+        }
+
+        h2{
+            color: rgb(112, 0, 112);
+        }
+
+        h3{
+            color: rgb(167, 1, 167);
+        }
+
+        li{
+            color:black;
+        }
+
+        dt{
+            font-size: 1.3em;
+        }
+
+    </style>
+    <!-- <title>Resume</title> -->
+</head>
+<body>
+    <div id="container">
+    <div id="outsideWrapper">
+    <div id="mainBody">
+        <nav id="sideBar">
+            <div class="sideBarBox1 sideBarBox">
+                <h1>Alex Schieltz</h1>
+                <ul class="header">
+                    <li >Bloomington, IL<i class="fa-solid fa-house"></i></li>
+                    <li>schielaj@rose-hulman.edu<i class="fa-solid fa-envelope"></i></li>
+                    <li>+1 (309)212-9361<i class="fa-solid fa-phone"></i></li>
+                    <!-- <li><a href="https://www.linkedin.com/in/alex-schieltz-2114232b5">LinkedIn</a></li> -->
+                </ul>
+            </div>
+            <div class="sideBarBox">
+                <h3 class="sideBarHeader">Education:</h3>
+                Rose-Hulman Institute of Technology
+                <ul class="nolist">
+                    <li class="nolist">B.S. Computer Science, 2027</li>
+                    <li class="nolist">Sophomore</li>
+                    <li class="nolist">GPA: 4.0</li>
+                </ul>
+            </div>
+            <hr class="basicHorizontal horizontal2">
+            <div class="sideBarBox">
+                <h3 class="sideBarHeader">Relevant Coursework:</h3>
+                <li class="nolist">Data Structures and Algorithms</li>
+                <li class="nolist">Object-Oriented Programming</li>
+                <li class="nolist">Intro to Systems Programming</li>
+                <li class="nolist">Web-Development</li>
+                <!-- <p>Object-Oriented Programming, Digital Systems, Intro to Systems Programming, Data Structures and Algorithms, Web-Development</p> -->
+            </div>
+            <hr class="basicHorizontal horizontal2">
+            <div class="sideBarBox">
+                <h3 class="sideBarHeader">Systems:</h3>
+                <li class="nolist">Windows 10+</li>
+                <li class="nolist">Ubuntu 18.04+</li>
+                <li class="nolist">macOS Catalina+</li>
+                <li class="nolist">Kali Linux</li>
+            </div>
+            <hr class="basicHorizontal horizontal2">
+            <div class="sideBarBox">
+                <h3 class="sideBarHeader">Software:</h3>
+                <li class="nolist">Git</li>
+                <li class="nolist">Visual Studio</li>
+                <li class="nolist">Visual Studio Code</li>
+                <li class="nolist">Tableau</li>
+                <li class="nolist">PyCharm</li>
+                <li class="nolist">Eclipse</li>
+                <!-- <p>Git, Eclipse, Visual Studio, Visual Studio Code, Tableau, </p> -->
+            </div>
+            <hr class="basicHorizontal horizontal2">
+            <div class="sideBarBox">
+                <h3 class="sideBarHeader">Activities:</h3>
+                <li class="nolist">Computer Security Club</li>
+                <li class="nolist">Cyberpatriot</li>
+                <li class="nolist">Cyber Defense Competition</li>
+                <li class="nolist">FIRST Robotics Competition</li>
+                <!-- <p>Git, Eclipse, Visual Studio, Visual Studio Code, Tableau, </p> -->
+            </div>
+        </nav>
+        <div id="mainContent">
+            <div id="mainContentBox">
+                
+                <h2>Objective:</h2>
+                <hr class="basicHorizontal">
+                <p>Seeking an internship in Computer Science or Software Engineering for the summer of 2024.</p>
+            </div>
+            <div id="mainContentBox">
+                
+                <h2>Work Experience:</h2>
+                <hr class="basicHorizontal">
+                <div class="workBox">
+                    <dl>
+                        <dt style="color: rgb(167, 1, 167);">IT Intern</dt>
+                        <dd>Illinois Wesleyan University
+                            <ul class="test">
+                                <li class="test">Assisted in setting up Active Directory through Azure</li>
+                                <li class="test">Deployed endpoint management system across university devices</li>
+                                <li class="test">Prepared software suite across university devices</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div id="mainContentBox">
+                
+                <h2>Projects:</h2>
+                <hr class="basicHorizontal">
+                <div class="projectBox">
+                    <h3>Java</h3>
+                    <ul>
+                        <li>Data Structure Projects:
+                            <ul>
+                                <li>Custom Stack and Queue implementations</li>
+                                <li>HashSet for Strings</li>
+                                <li>Self-balancing Binary Search Tree</li>
+                            </ul>
+                        </li>
+                        <li>Text-based financial application for tracking performance of stocks using real-time APIs</li>
+                        <li>2D Java game using javax.swing with graphics and input listeners</li>
+                    </ul>
+                </div>
+                <div class="projectBox">
+                    <h3>Python</h3>
+                    <ul>
+                        <!-- Make this one big project -->
+                        <li>Python Application for Evaluating Competitive Robots:
+                            <ul>
+                                <li>Pandas and matplotlib libraries to organize and display competition data</li>
+                                <li>Using google service accounts and google sheets API to fill and grab data from the cloud-hosted sheets</li>
+                                <li>Tkinter python library for developing an interactive GUI</li>
+                            </ul>
+                        </li>
+                        <li>Script for asymmetrically encrypting and decrypting data using RSA</li>
+                        <li>Program with requests library to create filler responses to a google form</li>
+                    </ul>
+                </div>
+                <!-- <div class="projectBox">
+                    <h3>C</h3>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div> -->
+                <div class="projectBox">
+                    <h3>Web</h3>
+                    <ul>
+                        <li>Simple Parallax effect using images and animation on drag</li>
+                        <li>Using Firebase Firestore and Authentication to store data remotely and manage logins</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <hr id="vertical"> -->
+        
+    </div>
+</div>
+</div>
+</body>
