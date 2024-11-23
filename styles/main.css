@@ -3,8 +3,8 @@
 :root{
     --vertical-space: 2rem;
     --horizontal-space: 3rem;
-    --main-color:#7E5EF2;
-    --text-color:#ffffff;
+    --main-color: #ffffff;
+    --text-color: #000000;
     --secondary-color:#B3B6F2;
     --tertinary-color:#62D98BA2;
     --underline-color:#F27A5E;
@@ -22,7 +22,7 @@ p{
 .ovalButton{
 background-color: var(--main-color);
   border: none;
-  color: white;
+  color: black;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;

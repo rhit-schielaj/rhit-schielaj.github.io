@@ -1,0 +1,12 @@
+Website needs:
+ - Resume
+ - LinkedIn
+ - Contact methods (phone #, email)
+ - Headline (what I do and am looking for)
+ - Custom Resume (offer a condensed, one-page version)
+    - Skills (divide it into categories)
+    - Experience (including upcoming Internships)
+    - Education
+    - Activities (include robotics)
+ - Quick About
+ - Projects (and a section for competitive Programming)
