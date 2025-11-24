@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/learning.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <a href="learning.html" style="text-decoration:none;"><h2 style="color:var(--text-color);">Learning Hub</h2></a>
+                    <button class="toggle-btn" id="sidebarToggle" title="Collapse sidebar" aria-label="Collapse sidebar" style="font-size:1.2rem;">&#x25C0;</button>
+                </div>
+                                <div class="radio-inputs" id="topicRadioGroup">
+                                    <label class="radio">
+                                        <input type="radio" name="topic-radio" id="radio-math" value="math" checked>
+                                        <span class="name">Math</span>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="topic-radio" id="radio-cs" value="cs">
+                                        <span class="name">CS</span>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="topic-radio" id="radio-ds" value="ds">
+                                        <span class="name">Data</span>
+                                    </label>
+                                </div>
+                <div class="sidebar-content">
+                    <div id="courses-math" class="topic-courses">
+                        <div class="course-item"><div class="course-header"><span>Math 1 (Kindergarten)</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Math 2 (2nd/3rd)</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Math 3 (4th/5th)</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Math 4 (6th/7th)</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Pre-Algebra</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Algebra 1</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Geometry</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Algebra 2</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Pre-Calculus</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Calculus 1</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Calculus 2</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Calculus 3</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Linear Algebra</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Differential Equations</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Discrete Math</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Proofs</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Combinatorics</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Probability</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Statistics</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Operations Research</span></div></div>
+                    </div>
+                    <div id="courses-cs" class="topic-courses" style="display:none">
+                        <div class="course-item"><div class="course-header"><span>Intro to Programming</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Digital Systems</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Computer Architecture</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Programming Basics</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Object Oriented Programming</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Web Design</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Data Structures</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Intro to Algorithms</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Software Design</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Computer Networks</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Theory of Computation</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Design & Analysis of Algorithms</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Databases</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Operating Systems</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Intro to Linux</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Basics of Cybersecurity</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Design of Scalable & Robust Systems</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Programming Languages & Compilers</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Malware Analysis & Reverse Engineering</span></div></div>
+                    </div>
+                    <div id="courses-ds" class="topic-courses" style="display:none">
+                        <div class="course-item"><div class="course-header"><span>Foundations of Analytical Thinking & Data Wrangling</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Statistical Data Science</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Introduction to Machine Learning</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Advanced Machine Learning</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Deep Learning</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Advanced Deep Learning</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Natural Language Processing</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Applied AI Engineering</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Data Mining</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Advanced Data Science</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Generative AI</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>Reinforcement Learning</span></div></div>
+                        <div class="course-item"><div class="course-header"><span>High-performance Computing</span></div></div>
+                    </div>
+                </div>
+        </nav>
+
+        <!-- Floating Toggle Button -->
+        <button class="floating-toggle" id="floatingToggle">☰</button>
+
+        <!-- Main Content Area -->
+        <main class="main-content" id="mainContent">
+            <div class="home-content" id="homeContent">
+                <div class="home-header">
+                    <h1>Welcome to the Learning Hub</h1>
+                    <p>A self-paced curriculum designed to guide learners from elementary mathematics through advanced computer science and data science concepts.</p>
+                </div>
+                <div class="diagram-section">
+                    <!-- <h2>Curriculum Pathways</h2> -->
+                    <div class="curriculum-pathway">
+                        <div class="pathway-column">
+                            <h3>Mathematics Courses</h3>
+                            <div class="course-card">
+                                <span class="level-label">Elementary</span>
+                                <h4>Arithmetic</h4>
+                                <div class="subcurricula">Foundation for all math</div>
+                                <div class="prerequisites"></div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">Middle School</span>
+                                <h4>Pre-Algebra</h4>
+                                <div class="prerequisites">Prerequisites: Arithmetic</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">High School</span>
+                                <h4>Algebra I</h4>
+                                <div class="prerequisites">Prerequisites: Pre-Algebra</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">High School</span>
+                                <h4>Geometry</h4>
+                                <div class="prerequisites">Prerequisites: Algebra I</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">High School</span>
+                                <h4>Algebra II</h4>
+                                <div class="prerequisites">Prerequisites: Geometry</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">High School</span>
+                                <h4>Pre-Calculus</h4>
+                                <div class="prerequisites">Prerequisites: Algebra II</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">College</span>
+                                <h4>Calculus I</h4>
+                                <div class="prerequisites">Prerequisites: Pre-Calculus</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">College</span>
+                                <h4>Calculus II</h4>
+                                <div class="prerequisites">Prerequisites: Calculus I</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">College</span>
+                                <h4>Linear Algebra</h4>
+                                <div class="prerequisites">Prerequisites: Calculus I</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">College</span>
+                                <h4>Calculus III</h4>
+                                <div class="prerequisites">Prerequisites: Calculus II</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Differential Equations</h4>
+                                <div class="prerequisites">Prerequisites: Calculus III</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Discrete Mathematics</h4>
+                                <div class="prerequisites">Prerequisites: Calculus II</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Proofs</h4>
+                                <div class="prerequisites">Prerequisites: Calculus II</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Combinatorics</h4>
+                                <div class="prerequisites">Prerequisites: Calculus II</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Probability</h4>
+                                <div class="prerequisites">Prerequisites: Calculus III</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Statistics</h4>
+                                <div class="prerequisites">Prerequisites: Calculus III</div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Operations Research</h4>
+                                <div class="prerequisites">Prerequisites: Calculus III, Linear Algebra, Probability</div>
+                            </div>
+                        </div>
+
+                        <div class="pathway-column">
+                            <h3>Computer Science Courses</h3>
+
+                            <div class="course-card">
+                                <span class="level-label">Beginner</span>
+                                <h4>Intro to Programming</h4>
+                                <div class="subcurricula">Python basics</div>
+                                <div class="prerequisites"></div>
+                            </div>
+
+                            <div class="course-card">
+                                <span class="level-label">Intermediate</span>
+                                <h4>Data Structures</h4>
+                                <div class="prerequisites">Prerequisites: Intro to Algorithms, Object Oriented Programming</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Intermediate</span>
+                                <h4>Object Oriented Programming</h4>
+                                <div class="prerequisites">Prerequisites: Intro to Programming, Programming Basics</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Intermediate</span>
+                                <h4>Web Design</h4>
+                                <div class="prerequisites">Prerequisites: Object Oriented Programming</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Intermediate</span>
+                                <h4>Programming Basics</h4>
+                                <div class="prerequisites">Prerequisites: Computer Architecture</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Intermediate</span>
+                                <h4>Computer Architecture</h4>
+                                <div class="prerequisites">Prerequisites: Programming Basics</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Beginner</span>
+                                <h4>Digital Systems</h4>
+                                <div class="prerequisites"></div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Intro to Algorithms</h4>
+                                <div class="prerequisites">Prerequisites: </div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Software Design</h4>
+                                <div class="prerequisites">Prerequisites: Object Oriented</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Computer Networks</h4>
+                                <div class="prerequisites">Prerequisites: Software Design</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Theory of Computation</h4>
+                                <div class="prerequisites">Prerequisites: Intro to Algorithms</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Design & Analysis of Algorithms</h4>
+                                <div class="prerequisites">Prerequisites: Intro to Algorithms</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Databases</h4>
+                                <div class="prerequisites">Prerequisites: Software Design</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Operating Systems (earlier)</h4>
+                                <div class="prerequisites">Prerequisites: Software Design</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Intro to CLI/Linux</h4>
+                                <div class="prerequisites">Prerequisites: Operating Systems</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Basics of Cybersecurity</h4>
+                                <div class="prerequisites">Prerequisites: Operating Systems</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Design of Scalable/Robust Systems</h4>
+                                <div class="prerequisites">Prerequisites: Software Design</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>PLO? (Programming Language Organization?)</h4>
+                                <div class="prerequisites">Prerequisites: Theory of Computation</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Malware Analysis/Reverse Engineering</h4>
+                                <div class="prerequisites">Prerequisites: Basics of Cybersecurity</div>
+                            </div>
+                        </div>
+                        <div class="pathway-column">
+                            <h3>Data Science Courses</h3>
+                            <div class="course-card">
+                                <span class="level-label">Foundational</span>
+                                <h4>Foundations of Analytical Thinking & Data Wrangling</h4>
+                                <div class="prerequisites">Prerequisites: None</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Foundational</span>
+                                <h4>Statistical Data Science</h4>
+                                <div class="prerequisites">Prerequisites: Foundations of Analytical Thinking</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Intermediate</span>
+                                <h4>Introduction to Machine Learning</h4>
+                                <div class="prerequisites">Prerequisites: Statistical Data Science</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Advanced Machine Learning</h4>
+                                <div class="prerequisites">Prerequisites: Introduction to Machine Learning</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Deep Learning</h4>
+                                <div class="prerequisites">Prerequisites: Advanced Machine Learning</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Advanced Deep Learning</h4>
+                                <div class="prerequisites">Prerequisites: Deep Learning</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>NLP (Natural Language Processing)</h4>
+                                <div class="prerequisites">Prerequisites: Deep Learning</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Applied AI Engineering</h4>
+                                <div class="prerequisites">Prerequisites: Advanced Deep Learning</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Data Mining</h4>
+                                <div class="prerequisites">Prerequisites: Statistical Data Science</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Advanced Data Science</h4>
+                                <div class="prerequisites">Prerequisites: Data Mining</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Generative AI</h4>
+                                <div class="prerequisites">Prerequisites: Deep Learning</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>Reinforcement Learning</h4>
+                                <div class="prerequisites">Prerequisites: Deep Learning</div>
+                            </div>
+                            <div class="course-card">
+                                <span class="level-label">Advanced</span>
+                                <h4>High-performance Computing</h4>
+                                <div class="prerequisites">Prerequisites: Advanced Data Science</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <button id="darkmode-toggle" title="Toggle dark mode" aria-label="Toggle dark mode" style="position:fixed;top:2rem;right:2rem;background:var(--secondary-color);color:#fff;border:none;width:50px;height:50px;border-radius:50%;font-size:1.5rem;cursor:pointer;box-shadow:var(--shadow);z-index:101;display:flex;align-items:center;justify-content:center;transition:background var(--transition);">🌙</button>
+    <script>
+        // Sidebar collapse/expand logic
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const floatingToggle = document.getElementById('floatingToggle');
+        const mainContent = document.getElementById('mainContent');
+        function setSidebarCollapsed(collapsed) {
+            if (collapsed) {
+                sidebar.classList.add('collapsed');
+                mainContent.classList.add('expanded');
+                floatingToggle.classList.add('visible');
+            } else {
+                sidebar.classList.remove('collapsed');
+                mainContent.classList.remove('expanded');
+                floatingToggle.classList.remove('visible');
+            }
+        }
+        sidebarToggle.addEventListener('click', () => setSidebarCollapsed(true));
+        floatingToggle.addEventListener('click', () => setSidebarCollapsed(false));
+
+        // Topic switching logic for radio group
+        const topicCourses = {
+            math: document.getElementById('courses-math'),
+            cs: document.getElementById('courses-cs'),
+            ds: document.getElementById('courses-ds')
+        };
+        function showTopic(topic) {
+            Object.keys(topicCourses).forEach(key => {
+                topicCourses[key].style.display = (key === topic) ? '' : 'none';
+            });
+        }
+        document.getElementById('topicRadioGroup').addEventListener('change', function(e) {
+            if (e.target && e.target.name === 'topic-radio') {
+                showTopic(e.target.value);
+            }
+        });
+        // Set default topic
+        showTopic('math');
+
+        // Light/Dark mode toggle
+        const darkToggle = document.getElementById('darkmode-toggle');
+        function setDarkMode(on) {
+            document.body.classList.toggle('darkmode', on);
+            darkToggle.textContent = on ? '☀️' : '🌙';
+        }
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const saved = localStorage.getItem('darkmode');
+        if (saved === 'true' || (saved === null && prefersDark)) setDarkMode(true);
+        darkToggle.addEventListener('click', () => {
+            const isDark = document.body.classList.toggle('darkmode');
+            localStorage.setItem('darkmode', isDark);
+            darkToggle.textContent = isDark ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>
